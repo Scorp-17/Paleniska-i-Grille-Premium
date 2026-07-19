@@ -1,0 +1,6 @@
+{
+  "name": "Paleniska i Grille Premium",
+  "description": "Ekskluzywne paleniska ogrodowe, rzemieślnicze grille, drewutnie oraz nowoczesne meble ogrodowe z drewna i stali.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
