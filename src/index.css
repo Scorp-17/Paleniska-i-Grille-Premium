@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+/* 1. Все внешние шрифты ВСЕГДА идут на самом верху */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+/* 2. Только после этого импортируем Tailwind */
 @import "tailwindcss";
 
 @theme {
@@ -6,6 +9,7 @@
   --font-display: "Outfit", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
+  /* Ваши кастомные цвета (теперь будут работать идеально) */
   --color-brand-charcoal: #0d0d0d;
   --color-brand-dark: #151518;
   --color-brand-gray: #242427;
@@ -20,26 +24,27 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
   }
-  
+
   body {
-    background-color: #0d0d0d;
+    /* Вместо хардкода #0d0d0d теперь можно использовать вашу же переменную */
+    background-color: var(--color-brand-charcoal);
     color: #f4f4f5;
+    font-family: var(--font-sans);
   }
 
-  /* Custom scrollbar */
+  /* Кастомный скроллбар */
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #0d0d0d;
+    background: var(--color-brand-charcoal);
   }
   ::-webkit-scrollbar-thumb {
-    background: #242427;
+    background: var(--color-brand-gray);
     border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #d97706;
+    background: var(--color-brand-gold);
   }
 }
-
