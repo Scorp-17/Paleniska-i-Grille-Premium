@@ -4,18 +4,15 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { defineConfig } from "vite";
 
-// Создаем аналог __dirname для ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const repoName = "paleniska-i-grille-premium";
-
-export default defineConfig(({ command }) => ({
-  base: command === "build" ? `/${repoName}/` : "/",
+export default defineConfig({
+  // Указываем базовый путь жестко строкой для GitHub Pages
+  base: "/paleniska-i-grille-premium/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
-      // Направляем алиас @ сразу в папку src для удобства импортов
       "@": path.resolve(__dirname, "./src"),
     },
   },
@@ -26,4 +23,4 @@ export default defineConfig(({ command }) => ({
     // Disable file watching when DISABLE_HMR is true to save CPU during agent edits.
     watch: process.env.DISABLE_HMR === "true" ? null : {},
   },
-}));
+});

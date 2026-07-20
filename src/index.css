@@ -3,7 +3,6 @@
 
 /* 2. Только после этого импортируем Tailwind */
 @import "tailwindcss";
-
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Outfit", sans-serif;
