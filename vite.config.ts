@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 
 export default defineConfig({
   // Указываем базовый путь жестко строкой для GitHub Pages
-  base: "/paleniska-i-grille-premium/",
+  base: "/Paleniska-i-Grille-Premium/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
